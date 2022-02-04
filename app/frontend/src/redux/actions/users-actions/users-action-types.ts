@@ -1,0 +1,1 @@
+export const SET_USERS_BY_PAGE = '[users] SET_USERS_BY_PAGE';

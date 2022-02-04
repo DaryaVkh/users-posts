@@ -1,0 +1,25 @@
+.card {
+    position: relative;
+}
+
+.closeIcon {
+    position: absolute;
+    top: 13px;
+    right: -38px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out 0s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.box {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    background-color: white;
+    border-radius: 20px;
+}

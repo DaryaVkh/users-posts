@@ -1,0 +1,1 @@
+export const SET_ACCESS_TOKEN = '[app] SET_ACCESS_TOKEN';
