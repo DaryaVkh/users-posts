@@ -11,7 +11,7 @@ import {
 } from '../../entities/post-list-page/post-list-page.interfaces';
 import {ThunkDispatch} from 'redux-thunk';
 import {Dispatch} from 'redux';
-import {getCommentsOnPost, getPostsByPage} from '../../redux/actions/posts-actions/posts-actions';
+import {getPostsByPage} from '../../redux/actions/posts-actions/posts-actions';
 import {connect} from 'react-redux';
 import {IPost} from '../../entities/api/api.interfaces';
 import Card from '../../components/card/card';
@@ -25,6 +25,7 @@ const PostListPage: FC<IPostListPageProps> = props => {
     const [openedPost, setOpenedPost] = useState<IPost>();
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         props.onGetPostsByPage(1);
     }, []);
 

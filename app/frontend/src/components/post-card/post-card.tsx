@@ -16,9 +16,7 @@ import Loading from '../loading/loading';
 
 const PostCard: FC<IPostCardProps> = props => {
     useEffect(() => {
-        if (props.commentsOnPost[props.id] === undefined) {
-            props.onGetCommentsOnPost(props.id);
-        }
+        props.onGetCommentsOnPost(props.id);
     }, []);
 
     const renderComments = () => {

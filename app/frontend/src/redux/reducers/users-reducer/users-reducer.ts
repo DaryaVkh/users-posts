@@ -6,7 +6,7 @@ const initialState: IUserReducerState = {
     usersByPage: {}
 };
 
-export const usersReducer = (state: IUserReducerState = initialState, action: IUserAction) => {
+export const usersReducer = (state: IUserReducerState = initialState, action: IUserAction): IUserReducerState => {
     switch (action.type) {
         case SET_USERS_BY_PAGE:
             return {

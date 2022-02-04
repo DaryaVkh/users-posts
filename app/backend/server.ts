@@ -3,10 +3,12 @@ import * as path from 'path';
 import config from './config.json';
 import {UsersApiService} from './api/users-api.service';
 import {PostsApiService} from './api/posts-api.service';
+import nocache from 'nocache';
 
 const app = express();
 
 app.use(express.static(path.join(__dirname, config.frontendFolder)));
+app.use(nocache());
 
 app.get("/v1/api/users", async (req: Request, res: Response) => {
     const query = req.query.page as string;
@@ -21,7 +23,7 @@ app.get("/v1/api/posts", async (req: Request, res: Response) => {
 });
 
 app.get('/v1/api/comments', async (req: Request, res: Response) => {
-    const query = req.query.postId as string;
+    const query = req.query.post_id as string;
     const commentsOnPost = await PostsApiService.getCommentsOnPost(query);
     res.send(commentsOnPost);
 });

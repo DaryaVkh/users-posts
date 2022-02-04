@@ -1,7 +1,7 @@
 import React, {FC, useCallback, useState} from 'react';
 import styles from './main-page.module.scss';
 import PageHeader from '../../components/page-header/page-header';
-import {Alert, Button, FormControl, FormHelperText, OutlinedInput, Snackbar} from '@mui/material';
+import {Alert, Button, FormControl, OutlinedInput, Snackbar} from '@mui/material';
 import {Dispatch} from 'redux';
 import {setAccessToken} from '../../redux/actions/app-actions/app-actions';
 import {

@@ -7,7 +7,7 @@ const initialState: IPostReducerState = {
     commentsOnPost: {}
 }
 
-export const postsReducer = (state: IPostReducerState = initialState, action: IPostAction) => {
+export const postsReducer = (state: IPostReducerState = initialState, action: IPostAction): IPostReducerState => {
     switch (action.type) {
         case SET_POSTS_BY_PAGE:
             return {

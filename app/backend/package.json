@@ -5,10 +5,11 @@
   "private": null,
   "dependencies": {
     "express": "^4.17.1",
+    "nocache": "^3.0.1",
     "node-fetch": "2"
   },
   "scripts": {
-    "start": "ts-node server.ts",
+    "start": "yarn & ts-node server.ts",
     "build": "npx tsc"
   },
   "devDependencies": {

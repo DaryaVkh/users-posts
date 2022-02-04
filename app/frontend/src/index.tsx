@@ -9,12 +9,14 @@ import {IAppReducerState} from './redux/reducers/app-reducer/app-reducer.interfa
 import {Provider} from 'react-redux';
 import reduxThunk from 'redux-thunk';
 import {IUserReducerState} from './redux/reducers/users-reducer/users-reducer.interfaces';
+import {IPostReducerState} from './redux/reducers/posts-reducer/posts-reducer.interfaces';
 
 export const composeEnhancers = (window && (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 
 export interface AppStore {
     appReducer: IAppReducerState,
-    userReducer: IUserReducerState
+    usersReducer: IUserReducerState,
+    postsReducer: IPostReducerState
 }
 
 const store: Store<AppStore> = createStore(rootReducer, composeEnhancers(applyMiddleware(reduxThunk)));

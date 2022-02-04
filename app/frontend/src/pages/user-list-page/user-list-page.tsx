@@ -25,6 +25,7 @@ const UserListPage: FC<UserListPageProps> = props => {
     const [openedUser, setOpenedUser] = useState<IUser>();
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         props.onGetUsersByPage(1);
     }, []);
 
